@@ -56,6 +56,12 @@ addElement.addEventListener("click", () => {
     addTask(inputElement.value)
     refreshTasks()
 })
+inputElement.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        addTask(inputElement.value)
+        refreshTasks()
+    }
+})
 clearElement.addEventListener("click", () => {
     clearTasks()
     refreshTasks()
